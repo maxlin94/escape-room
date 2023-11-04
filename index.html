@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hacker Escape Rooms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.png" alt="Esc button logo" class="logo">
+            <h1>Hacker Escape Rooms</h1>
+        </div>
+        <ul class="menu-nav">
+            <li><a class="font-medium bold" href="#play-online">Play online</a></li>
+            <li><a class="font-medium bold" href="#popular-challenges">Play on-site</a></li>
+            <li><a class="font-medium bold" href="#story">The story</a></li>
+            <li><a class="font-medium bold" href="#contact-us">Contact us</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="center">
+            <picture>
+                <source srcset="./img/background.png" media="(max-width: 899px)">
+                <source srcset="./img/background2.png" media="(min-width: 900px)">
+                <img src="./img/background2.png" alt="Man behind computer">
+            </picture>
+            <div class="button-container">
+                <button class="button-secondary font-medium on-site-challenges">On-site challenges</button>
+                <button class="online-challenges font-medium" id="play-online">Online challenges</button>
+            </div>
+        </div>
+
+        <div class="quotes">
+            <div class="quote" id="quote-one">
+                <img src="img/photo.png" alt="Picture of a man's face">
+                <div>
+                    <p class="italic font-medium">This is a quote about how amazing this place is and how much fun me and my
+                        friends had when we tried it</p>
+                    <p class="visitor font-small">John Doe, visited us in September 2021</p>
+                </div>
+            </div>
+            <div class="quote" id="quote-two">
+                <img src="img/photo.png" alt="Picture of a man's face">
+                <div>
+                    <p class="italic font-medium">This is a quote about how amazing this place is and how much fun me and my
+                        friends had when we tried it</p>
+                    <p class="visitor font-small">John Doe, visited us in September 2021</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="popular-challenges">
+            <h2 class="font-bigger">Popular challenges right now</h2>
+            <div class="challenges">
+                <div class="challenge">
+                    <img src="img/background.png" alt="Man behind computer" class="challenge-photo">
+                    <h3 class="font-big">Title of room (on-site)</h3>
+                    <div class="rating">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span>2-6 participants</span>
+                    </div>
+                    <p class="font-small">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
+                        Nemo nocere tibi erit, et non inimicos, et</p>
+                    <button class="button-primary font-medium">Book this room</button>
+                </div>
+                <div class="challenge">
+                    <img src="img/background.png" alt="Man behind computer" class="challenge-photo">
+                    <h3 class="font-big">Title of room (on-site)</h3>
+                    <div class="rating">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span>2-6 participants</span>
+                    </div>
+                    <p class="font-small">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
+                        Nemo nocere tibi erit, et non inimicos, et</p>
+                    <button class="button-primary font-medium">Book this room</button>
+                </div>
+                <div class="challenge">
+                    <img src="img/background.png" alt="Man behind computer" class="challenge-photo">
+                    <h3 class="font-big">Title of room (on-site)</h3>
+                    <div class="rating">
+                        <div>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span>2-6 participants</span>
+                    </div>
+                    <p class="font-small">Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam.
+                        Nemo nocere tibi erit, et non inimicos, et</p>
+                    <button class="button-primary font-medium">Book this room</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="center">
+            <div class="button-container margin-y-80">
+                <button class="button-secondary font-medium on-site-challenges">On-site challenges</button>
+                <button class="online-challenges font-medium">Online challenges</button>
+            </div>
+        </div>
+
+        <div class="story" id="story">
+            <p class="font-big">
+                Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque
+                vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.
+            </p>
+            <button class="font-medium">Read the full story</button>
+        </div>
+
+        <section class="examples">
+            <div class="example">
+                <img src="img/friends.png" alt="People behind computer">
+                <div>
+                    <h2 class="font-bigger bold">
+                        Play with your friends or build your team stronger at work
+                    </h2>
+                    <p class="font-medium">
+                        Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi
+                        erit, et non inimicos, et
+                    </p>
+                    <button class="button-primary font-medium">Book on-site today</button>
+                </div>
+            </div>
+            <div class="example" id="example-two">
+                <img src="img/solo.png" alt="Person behind computer">
+                <div>
+                    <h2 class="font-bigger bold">
+                        Play online or visit our venue for one of our 25 escape rooms
+                    </h2>
+                    <p class="font-medium">
+                        Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil inuitam. Nemo nocere tibi
+                        erit, et non inimicos, et
+                    </p>
+                    <button class="button-primary medium">See all challenges</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="description">
+            <h3 class="font-small bold">[Esc] Hacker Escape Rooms</h3>
+            <p class="font-small">Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant
+                haec quoque vos omnino desit illud quo solo felicitatis libertatisque perficiuntur.</p>
+        </div>
+        <ul class="menu-column">
+            <li><h3 class="font-small bold">Site map</h3></li>
+            <li><a class="font-small" href="#story">The story</a></li>
+            <li><a class="font-small" href="#" id="contact-us">Contact us</a></li>
+            <li><a class="font-small" href="#">Legal</a></li>
+            <li><a class="font-small" href="#play-online">Play online</a></li>
+            <li><a class="font-small" href="#popular-challenges">Play on-site</a></li>
+        </ul>
+        <ul class="menu-column">
+            <li><h3 class="font-small bold">Follow us on</h3></li>
+            <li><a class="font-small" href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a class="font-small" href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a class="font-small" href="https://www.twitter.com" target="_blank">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
