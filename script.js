@@ -9,17 +9,17 @@ menuBtn.addEventListener('click', () => {
     }
     , 100);
     backdrop.style.display = 'block';
-    document.body.style.overflowY = 'hidden';
+    document.body.style.overflow = 'hidden';
 });
 
 menuMobileClose.addEventListener('click', () => {
     menuMobile.style.display = '';
     backdrop.style.display = '';
-    document.body.style.overflowY = '';
+    document.body.style.overflow = '';
 });
 menuItems.forEach(child => child.addEventListener('click', () => {
     menuMobile.style.display = '';
     backdrop.style.display = '';
-    document.body.style.overflowY = '';
+    document.body.style.overflow = '';
  }));
  
