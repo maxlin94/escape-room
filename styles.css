@@ -270,37 +270,35 @@ button:hover {
     align-items: center;
     justify-content: center;
     color: white;
+}
 
-    &>button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: transparent;
-        border: none;
-        color: white;
-        width: auto;
-        height: auto;
+.menu-mobile i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: auto;
+    height: auto;
+    font-size: 60px;
+}
 
-        &>i {
-            font-size: 60px;
-        }
-    }
+.menu-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: white;
+    gap: 4rem;
 
-    &>ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        color: white;
-        gap: 4rem;
+}
 
-        &>li a {
-            text-decoration: none;
-            color: white;
-            font-size: 36px;
-            font-weight: bold;
-            margin: 1rem;
-        }
-    }
+.menu-mobile ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 1rem;
 }
 
 .backdrop {
