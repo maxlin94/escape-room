@@ -2,6 +2,7 @@
     --primary: #E3170A;
     --secondary: #8ACFE5;
     --primary-dark: #011827;
+    --display: 'none';
 }
 
 *,
@@ -15,11 +16,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    color: white;
-    font-size: 24px;
 }
 
 header {
@@ -39,6 +35,8 @@ header h1 {
     margin-left: 14px;
     margin-top: 25px;
     width: 78px;
+    color: white;
+    font-size: 1.5rem;
 }
 
 header div {
@@ -50,7 +48,7 @@ picture {
     width: 100%;
 }
 
-picture img{
+picture img {
     display: block;
     width: 100%;
     height: 100%;
@@ -115,24 +113,24 @@ button:hover {
     font-weight: normal;
 }
 
-.menu-nav {
+.menu-desktop {
     display: none;
 }
 
-.menu-nav li {
+.menu-desktop li {
     list-style: none;
 }
 
 .font-small {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .font-medium {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .font-big {
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 .font-bigger {
@@ -257,6 +255,89 @@ button:hover {
     width: 363px;
 }
 
+.menu-mobile {
+    z-index: 10;
+    animation-name: fadein;
+    animation-duration: 0.2s;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    background-color: var(--primary-dark);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    &>button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        width: auto;
+        height: auto;
+
+        &>i {
+            font-size: 60px;
+        }
+    }
+
+    &>ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        color: white;
+        gap: 4rem;
+
+        &>li a {
+            text-decoration: none;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 1rem;
+        }
+    }
+}
+
+.backdrop {
+    animation-name: opacity;
+    animation-duration: 0.1s;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.menu-button {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    width: 51px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.menu-button__line {
+    display: block;
+    background-color: white;
+    width: 51px;
+    height: 6px;
+    border-radius: 6px;
+}
+
 .story {
     display: flex;
     flex-direction: column;
@@ -326,11 +407,41 @@ button:hover {
     color: red;
 }
 
+@media (max-width: 330px) {
+    html {
+        font-size: 14px;
+    }
+
+    header div {
+        flex-direction: column;
+
+        &>h1 {
+            text-align: center;
+            margin: 1rem;
+            font-size: 1.5rem;
+            width: auto;
+        }
+    }
+
+    .quote {
+        flex-direction: column;
+        text-align: center;
+
+        &>img {
+            align-self: center;
+        }
+    }
+
+    .menu-mobile ul li a {
+        font-size: 11vw;
+    }
+}
+
 @media (min-width: 900px) {
     header div h1 {
         width: auto;
         margin-top: 61px;
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     footer {
@@ -346,7 +457,7 @@ button:hover {
     }
 
     #popular-challenges h2 {
-        font-size: 36px;
+        font-size: 2.25rem;
     }
 
     #example-two div {
@@ -358,7 +469,7 @@ button:hover {
         display: flex;
     }
 
-    .menu-nav {
+    .menu-desktop {
         display: flex;
         justify-content: center;
         height: fit-content;
@@ -367,13 +478,17 @@ button:hover {
         padding-bottom: 22px;
     }
 
-    .menu-nav a {
+    .menu-desktop a {
         color: white;
         text-decoration: none;
     }
 
-    .menu-nav li a:hover {
+    .menu-desktop li a:hover {
         color: var(--secondary);
+    }
+
+    .menu-button {
+        display: none;
     }
 
     .button-container {
@@ -396,7 +511,7 @@ button:hover {
         background-color: var(--primary);
         color: white;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .challenges {
@@ -464,5 +579,33 @@ button:hover {
 
     .story p {
         width: 49.3%;
+    }
+}
+
+@media (min-width: 1500px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        scale: 0.9;
+        opacity: 0.3;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
     }
 }
