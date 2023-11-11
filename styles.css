@@ -257,7 +257,7 @@ button:hover {
 
 .menu-mobile {
     z-index: 10;
-    animation-name: fadein;
+    animation-name: fadegrowin;
     animation-duration: 0.2s;
     position: fixed;
     left: 1rem;
@@ -270,18 +270,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     color: white;
-}
-
-.menu-mobile i {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    width: auto;
-    height: auto;
-    font-size: 60px;
 }
 
 .menu-mobile ul {
@@ -301,15 +289,38 @@ button:hover {
     margin: 1rem;
 }
 
+.menu-mobile__close div {
+    animation-name: fadein;
+    animation-duration: 0.1s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 51px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.menu-mobile__close :nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.menu-mobile__close :nth-child(2) {
+    transform: rotate(-45deg);
+}
+
 .backdrop {
     animation-name: opacity;
     animation-duration: 0.1s;
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     opacity: 0.5;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background-color: white;
 }
 
@@ -586,7 +597,7 @@ button:hover {
     }
 }
 
-@keyframes fadein {
+@keyframes fadegrowin {
     0% {
         scale: 0.9;
         opacity: 0.3;
@@ -605,5 +616,15 @@ button:hover {
 
     100% {
         opacity: 0.5;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
